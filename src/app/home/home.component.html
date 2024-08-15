@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+
+<h2 class="mt-5 text-center fw-bold text-uppercase">Products</h2>
+
+<section>
+  <div class="container py-5">
+    <div class="row">
+      @for (product of products; track $index) {
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 gy-4">
+          <div class="card">
+            <div class="d-flex justify-content-between p-3">
+              <p class="lead mb-0">Today's Combo Offer</p>
+              <div
+                class="bg-danger rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                style="width: 35px; height: 35px;">
+                <p class="text-white mb-0 small">New</p>
+              </div>
+            </div>
+            <div class="card-img-container" style="height: 200px; background-color: #f8f9fa;">
+              <img [src]="product.image"
+                alt="Product Image"
+                style="height: 100%; width: 100%; object-fit: contain;" />
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <p class="h5"><a class="text-muted text-decoration-none">{{product.category}}</a></p>
+              </div>
+  
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="mb-0 small">{{product.title.split(" ",4).join(" ")}}</h5>
+                <h5 class="text-danger mb-0">${{product.price}}</h5>
+              </div>
+  
+              <div class="d-flex justify-content-between mb-2">
+                <p class="text-muted mb-0">Rate: <span class="fw-bold">{{product.rating.rate}}</span></p>
+                <div class="ms-auto text-warning">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

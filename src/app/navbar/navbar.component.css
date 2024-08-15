@@ -1,0 +1,32 @@
+.hero_area.sub_pages {
+    height: 100vh;
+  }
+  
+  .navbar-collapse{
+    background-color: #f9ece6;
+    padding: 10px 0;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .user_option a {
+    margin-right: 25px;
+    color: #000000;
+  }
+  
+  /*end header section*/
+  
+  .slider_section{
+      background-color: #f89cab;
+      color: #ffffff;
+  }
+  
+  
+  .slider_section .detail-box {
+    padding-left: 45px;
+    margin: 45px 0;
+  }
+  
+  .slider_section .detail-box h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+  }
